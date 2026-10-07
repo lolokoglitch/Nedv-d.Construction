@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kariéra - NEDVĚD CONSTRUCTION</title>
+    <style>
+        :root { --primary: #f39c12; --primary-hover: #e67e22; --dark: #1c2024; --darker: #131518; --light-bg: #f8f9fa; --text-main: #333; --text-muted: #555; --radius: 8px; }
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-main); line-height: 1.6; }
+        .header { background-color: #fff; padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .header-left { display: flex; align-items: center; gap: 50px; }
+        .logo-img { max-height: 70px; display: block; }
+        .nav { display: flex; gap: 30px; }
+        .nav a { color: var(--dark); text-decoration: none; font-size: 16px; font-weight: 700; text-transform: uppercase; transition: color 0.3s; }
+        .nav a:hover { color: var(--primary); }
+        .nav a.active { color: var(--primary); }
+        .contact-info { text-align: right; }
+        .contact-info p { margin: 0; font-size: 22px; font-weight: 800; color: var(--primary); }
+        .contact-info span { font-size: 15px; color: var(--primary); font-weight: 600; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+        .section-title { font-size: 36px; color: var(--dark); margin-bottom: 30px; font-weight: 800; text-align: center; position: relative; }
+        .section-title::after { content: ""; display: block; width: 60px; height: 4px; background: var(--primary); margin: 15px auto 0; border-radius: 2px; }
+        .career-intro { background: #fff; padding: 40px; border-radius: var(--radius); box-shadow: 0 8px 25px rgba(0,0,0,0.04); font-size: 18px; line-height: 1.8; color: var(--text-muted); margin-bottom: 60px; text-align: center; }
+        .jobs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .job-card { background: var(--dark); color: #fff; border-radius: var(--radius); padding: 40px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border-top: 6px solid var(--primary); display: flex; flex-direction: column; justify-content: space-between; }
+        .job-card h3 { color: var(--primary); font-size: 24px; margin-top: 0; margin-bottom: 20px; font-weight: 800; }
+        .job-req-list { list-style: none; padding: 0; margin: 0 0 30px 0; }
+        .job-req-list li { position: relative; padding-left: 20px; margin-bottom: 10px; font-size: 16px; color: #ddd; }
+        .job-req-list li::before { content: "•"; color: var(--primary); font-size: 20px; position: absolute; left: 0; top: -3px; }
+        .job-btn { display: inline-block; background-color: var(--primary); color: #fff; padding: 12px 25px; text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 14px; border-radius: var(--radius); text-align: center; transition: background 0.3s; }
+        .job-btn:hover { background-color: var(--primary-hover); }
+        .footer { background-color: var(--darker); color: #888; text-align: center; padding: 40px 20px; margin-top: 60px; font-size: 14px; }
+        .footer p { margin: 5px 0; }
+        .footer strong { color: #fff; font-size: 18px; letter-spacing: 1px; }
+        @media (max-width: 900px) { .header-left { gap: 20px; } .nav { gap: 15px; } .nav a { font-size: 14px; } }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <a href="index.html"><img src="Černozlute_logo_bile_pozadi.jfif" alt="Nedvěd Construction Logo" class="logo-img"></a>
+            <div class="nav">
+                <a href="index.html#sluzby">Služby</a>
+                <a href="technika.html">Technika</a>
+                <a href="o-nas.html">O nás</a>
+                <a href="nase-prace.html">Naše práce</a>
+                <a href="kariera.html" class="active">Kariéra</a>
+                <a href="kontakty.html">Kontakty</a>
+            </div>
+        </div>
+        <div class="contact-info">
+            <p>736 219 725</p>
+            <span>j.nedved@construction.cz</span>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="section-title">Kariéra v Nedvěd Construction</h2>
+        <div class="career-intro">
+            <p><strong>Jsme stavební firma z Červeného Kostelce</strong> zaměřená především na zemní práce, stavební práce a autodopravu. Jsme mladý a přátelský kolektiv, který má rád svou práci, techniku a chuť posouvat se dál.</p>
+            <p>Hledáme spolehlivé lidi, kteří se nebojí práce, mají vztah ke stavebnictví a chtějí být součástí týmu, kde se může každý podílet na výsledku.</p>
+        </div>
+        <div class="jobs-grid">
+            <div class="job-card">
+                <div>
+                    <h3>Řidič nákladních vozidel</h3>
+                    <p style="color: #bbb; margin-bottom: 20px;">Hledáme spolehlivého řidiče do naší flotily nákladních vozů.</p>
+                    <p style="color: #fff; font-weight: bold; margin-bottom: 10px;">Požadujeme:</p>
+                    <ul class="job-req-list"><li>Řidičské oprávnění skupiny C</li></ul>
+                </div>
+                <a href="kontakty.html" class="job-btn">Mám zájem o pozici</a>
+            </div>
+            <div class="job-card">
+                <div>
+                    <h3>Pracovník zemních a stavebních prací</h3>
+                    <p style="color: #bbb; margin-bottom: 20px;">Hledáme pracovitého kolegu k našim zemním a stavebním strojům.</p>
+                    <p style="color: #fff; font-weight: bold; margin-bottom: 10px;">Požadujeme:</p>
+                    <ul class="job-req-list">
+                        <li>Praxe ve stavebnictví</li>
+                        <li>Řidičský průkaz skupiny B+E</li>
+                        <li>Strojnický průkaz</li>
+                    </ul>
+                </div>
+                <a href="kontakty.html" class="job-btn">Mám zájem o pozici</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <strong>Nedvěd Construction</strong>
+        <p>&copy; 2026 Všechna práva vyhrazena.</p>
+    </div>
+</body>
+</html>

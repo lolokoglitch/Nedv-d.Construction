@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demolice a likvidace - NEDVĚD CONSTRUCTION</title>
+    <style>
+        :root { --primary: #f39c12; --primary-hover: #e67e22; --dark: #1c2024; --darker: #131518; --light-bg: #f8f9fa; --text-main: #333; --text-muted: #555; --radius: 8px; }
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-main); line-height: 1.6; }
+        .header { background-color: #fff; padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .header-left { display: flex; align-items: center; gap: 50px; }
+        .logo-img { max-height: 70px; display: block; }
+        .nav { display: flex; gap: 30px; }
+        .nav a { color: var(--dark); text-decoration: none; font-size: 16px; font-weight: 700; text-transform: uppercase; transition: color 0.3s; }
+        .nav a:hover { color: var(--primary); }
+        .contact-info { text-align: right; }
+        .contact-info p { margin: 0; font-size: 22px; font-weight: 800; color: var(--primary); }
+        .contact-info span { font-size: 15px; color: var(--primary); font-weight: 600; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+        .section-title { font-size: 36px; color: var(--dark); margin-bottom: 30px; font-weight: 800; }
+        .service-detail-img { width: 100%; height: 400px; object-fit: cover; border-radius: var(--radius); border-bottom: 6px solid var(--primary); box-shadow: 0 8px 25px rgba(0,0,0,0.08); margin-bottom: 40px; }
+        .service-desc { background: #fff; padding: 40px; border-radius: var(--radius); box-shadow: 0 8px 25px rgba(0,0,0,0.04); font-size: 18px; line-height: 1.8; color: var(--text-muted); margin-bottom: 60px; }
+        .realizations-title { font-size: 28px; color: var(--dark); margin-bottom: 30px; font-weight: 800; border-left: 6px solid var(--primary); padding-left: 15px; }
+        .realizations-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .realization-img { width: 100%; height: 260px; object-fit: cover; border-radius: var(--radius); box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .footer { background-color: var(--darker); color: #888; text-align: center; padding: 40px 20px; margin-top: 60px; font-size: 14px; }
+        .footer strong { color: #fff; font-size: 18px; letter-spacing: 1px; }
+        @media (max-width: 900px) { .header-left { gap: 20px; } .nav { gap: 15px; } .nav a { font-size: 14px; } }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <a href="index.html"><img src="Černozlute_logo_bile_pozadi.jfif" alt="Nedvěd Construction Logo" class="logo-img"></a>
+            <div class="nav">
+                <a href="index.html#sluzby">Služby</a>
+                <a href="technika.html">Technika</a>
+                <a href="o-nas.html">O nás</a>
+                <a href="nase-prace.html">Naše práce</a>
+                <a href="kariera.html">Kariéra</a>
+                <a href="kontakty.html">Kontakty</a>
+            </div>
+        </div>
+        <div class="contact-info"><p>736 219 725</p><span>j.nedved@construction.cz</span></div>
+    </div>
+    <div class="container">
+        <h2 class="section-title">Demolice a likvidace</h2>
+        <img src="demolice1.jpg" alt="Demolice a likvidace" class="service-detail-img">
+        <div class="service-desc">
+            <p>Provádíme odborné demoliční a likvidační práce:</p>
+            <ul style="margin-top: 10px; margin-bottom: 0;">
+                <li>Demolice staveb a objektů</li>
+                <li>Likvidace suti</li>
+                <li>Recyklace materiálů</li>
+            </ul>
+        </div>
+        <h3 class="realizations-title">Realizace – Demolice a likvidace</h3>
+        <div class="realizations-grid">
+            <img src="demolice1.jpg" alt="Realizace 1" class="realization-img">
+            <img src="demolice1.jpg" alt="Realizace 2" class="realization-img">
+        </div>
+    </div>
+    <div class="footer"><strong>Nedvěd Construction</strong><p>&copy; 2026 Všechna práva vyhrazena.</p></div>
+</body>
+</html>

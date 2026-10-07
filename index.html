@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEDVĚD CONSTRUCTION - Stavební a zemní práce</title>
+    <style>
+        :root { --primary: #f39c12; --primary-hover: #e67e22; --dark: #1c2024; --darker: #131518; --light-bg: #f8f9fa; --text-main: #333; --text-muted: #555; --radius: 8px; }
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-main); line-height: 1.6; scroll-behavior: smooth; }
+        .header { background-color: #fff; padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .header-left { display: flex; align-items: center; gap: 50px; }
+        .logo-img { max-height: 70px; display: block; }
+        .nav { display: flex; gap: 30px; }
+        .nav a { color: var(--dark); text-decoration: none; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s; }
+        .nav a:hover { color: var(--primary); }
+        .contact-info { text-align: right; }
+        .contact-info p { margin: 0; font-size: 22px; font-weight: 800; color: var(--primary); }
+        .contact-info span { font-size: 15px; color: var(--primary); font-weight: 600; }
+        .hero { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('uvod1.jpg') no-repeat center center; background-size: cover; height: 65vh; min-height: 500px; display: flex; align-items: center; padding: 0 50px; }
+        .hero-box { max-width: 800px; }
+        .hero-box h1 { color: #fff; font-size: 48px; margin-top: 0; line-height: 1.1; font-weight: 800; letter-spacing: -1px; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        .hero-box p { color: #f0f0f0; font-size: 22px; margin-bottom: 40px; font-weight: 400; text-shadow: 0 2px 5px rgba(0,0,0,0.3); }
+        .btn { background-color: var(--primary); color: #fff; padding: 16px 35px; text-decoration: none; font-weight: 600; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; border-radius: var(--radius); display: inline-block; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 6px 15px rgba(243, 156, 18, 0.3); margin-right: 15px; border: none; }
+        .btn:hover { background-color: var(--primary-hover); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(243, 156, 18, 0.4); }
+        .btn-dark { background-color: rgba(255,255,255,0.1); color: #fff; backdrop-filter: blur(5px); box-shadow: none; border: 1px solid rgba(255,255,255,0.3); }
+        .btn-dark:hover { background-color: #fff; color: var(--dark); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
+        .section-title { font-size: 32px; color: var(--dark); margin-bottom: 50px; font-weight: 800; text-align: center; position: relative; }
+        .section-title::after { content: ""; display: block; width: 60px; height: 4px; background: var(--primary); margin: 15px auto 0; border-radius: 2px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+        .service-card { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.04); transition: all 0.3s ease; border: 1px solid #f0f0f0; display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.08); border-color: var(--primary); }
+        .service-img { width: 100%; height: 180px; object-fit: cover; border-bottom: 4px solid var(--primary); }
+        .service-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .service-card h3 { color: var(--dark); margin-top: 0; font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+        .service-card p { color: var(--text-muted); font-size: 14px; margin-bottom: 20px; }
+        .service-link-text { color: var(--primary); font-weight: 700; font-size: 14px; text-transform: uppercase; }
+        .realizations-preview { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 30px; }
+        .realization-card { background: #fff; border-radius: var(--radius); overflow: hidden; text-decoration: none; color: inherit; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #f0f0f0; transition: transform 0.3s; }
+        .realization-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .realization-card img { width: 100%; height: 180px; object-fit: cover; }
+        .realization-card p { padding: 15px; margin: 0; font-weight: 700; font-size: 15px; color: var(--dark); text-align: center; }
+        .footer { background-color: var(--darker); color: #888; text-align: center; padding: 40px 20px; margin-top: 60px; font-size: 14px; }
+        .footer p { margin: 5px 0; }
+        .footer strong { color: #fff; font-size: 18px; letter-spacing: 1px; }
+        @media (max-width: 900px) { .header-left { gap: 20px; } .nav { gap: 15px; } .nav a { font-size: 14px; } }
+        @media (max-width: 768px) { .realizations-preview { grid-template-columns: repeat(2, 1fr); } }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <a href="index.html"><img src="Černozlute_logo_bile_pozadi.jfif" alt="Nedvěd Construction Logo" class="logo-img"></a>
+            <div class="nav">
+                <a href="#sluzby">Služby</a>
+                <a href="technika.html">Technika</a>
+                <a href="o-nas.html">O nás</a>
+                <a href="nase-prace.html">Naše práce</a>
+                <a href="kariera.html">Kariéra</a>
+                <a href="kontakty.html">Kontakty</a>
+            </div>
+        </div>
+        <div class="contact-info">
+            <p>736 219 725</p>
+            <span>j.nedved@construction.cz</span>
+        </div>
+    </div>
+    <div class="hero">
+        <div class="hero-box">
+            <h1>Spolehlivé zemní a stavební práce</h1>
+            <p>Preciznost, výkonná technika a požadavky investora vždy na prvním místě.</p>
+            <a href="#sluzby" class="btn">Naše služby</a>
+            <a href="kontakty.html" class="btn btn-dark">Kontakty</a>
+        </div>
+    </div>
+    <div id="sluzby" class="container">
+        <h2 class="section-title">Naše služby</h2>
+        <div class="services-grid">
+            <a href="sluzba-zemni-prace.html" class="service-card">
+                <img src="zemni prace.jfif" alt="Zemní práce" class="service-img">
+                <div class="service-content">
+                    <div>
+                        <h3>Zemní práce a terénní úpravy</h3>
+                        <p>Výkopy základů, jímek, nádrží, bazénů, inženýrských sítí, terénní úpravy a čištění pozemků.</p>
+                    </div>
+                    <span class="service-link-text">Více informací &rarr;</span>
+                </div>
+            </a>
+            <a href="sluzba-autodoprava.html" class="service-card">
+                <img src="autodoprava.jfif" alt="Autodoprava" class="service-img">
+                <div class="service-content">
+                    <div>
+                        <h3>Autodoprava</h3>
+                        <p>Přeprava stavebních materiálů, odvoz suti, doprava techniky a pronájem kontejnerů.</p>
+                    </div>
+                    <span class="service-link-text">Více informací &rarr;</span>
+                </div>
+            </a>
+            <a href="sluzba-stavebni-prace.html" class="service-card">
+                <img src="stavebni prace.jfif" alt="Stavební práce" class="service-img">
+                <div class="service-content">
+                    <div>
+                        <h3>Stavební práce</h3>
+                        <p>Inženýrské sítě, chodníky, dlažby, ploty a opěrné zídky.</p>
+                    </div>
+                    <span class="service-link-text">Více informací &rarr;</span>
+                </div>
+            </a>
+            <a href="sluzba-demolice.html" class="service-card">
+                <img src="demolice1.jpg" alt="Demolice" class="service-img">
+                <div class="service-content">
+                    <div>
+                        <h3>Demolice a likvidace</h3>
+                        <p>Demolice staveb, likvidace suti a recyklace materiálů.</p>
+                    </div>
+                    <span class="service-link-text">Více informací &rarr;</span>
+                </div>
+            </a>
+        </div>
+        <h3 style="font-size: 24px; color: var(--dark); margin: 60px 0 25px 0; text-align: center;">Vybrané realizace</h3>
+        <div class="realizations-preview">
+            <a href="sluzba-zemni-prace.html" class="realization-card"><img src="zemni prace.jfif" alt="Zemní práce"><p>Zemní práce</p></a>
+            <a href="sluzba-autodoprava.html" class="realization-card"><img src="autodoprava.jfif" alt="Autodoprava"><p>Autodoprava</p></a>
+            <a href="sluzba-stavebni-prace.html" class="realization-card"><img src="stavebni prace.jfif" alt="Stavební práce"><p>Stavební práce</p></a>
+            <a href="sluzba-demolice.html" class="realization-card"><img src="demolice1.jpg" alt="Demolice"><p>Demolice a likvidace</p></a>
+        </div>
+    </div>
+    <div class="footer">
+        <strong>Nedvěd Construction</strong>
+        <p>&copy; 2026 Všechna práva vyhrazena.</p>
+    </div>
+</body>
+</html>

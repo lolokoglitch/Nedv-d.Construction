@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakty - NEDVĚD CONSTRUCTION</title>
+    <style>
+        :root { --primary: #f39c12; --primary-hover: #e67e22; --dark: #1c2024; --darker: #131518; --light-bg: #f8f9fa; --text-main: #333; --text-muted: #555; --radius: 8px; }
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-main); line-height: 1.6; }
+        .header { background-color: #fff; padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .header-left { display: flex; align-items: center; gap: 50px; }
+        .logo-img { max-height: 70px; display: block; }
+        .nav { display: flex; gap: 30px; }
+        .nav a { color: var(--dark); text-decoration: none; font-size: 16px; font-weight: 700; text-transform: uppercase; transition: color 0.3s; }
+        .nav a:hover { color: var(--primary); }
+        .nav a.active { color: var(--primary); }
+        .contact-info { text-align: right; }
+        .contact-info p { margin: 0; font-size: 22px; font-weight: 800; color: var(--primary); }
+        .contact-info span { font-size: 15px; color: var(--primary); font-weight: 600; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 80px 20px; }
+        .section-title { font-size: 36px; color: var(--dark); margin-bottom: 50px; font-weight: 800; text-align: center; position: relative; }
+        .section-title::after { content: ""; display: block; width: 60px; height: 4px; background: var(--primary); margin: 15px auto 0; border-radius: 2px; }
+        .contact-wrap { display: flex; flex-wrap: wrap; gap: 40px; background: #fff; padding: 50px; border-radius: var(--radius); box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 40px; }
+        .contact-col { flex: 1; min-width: 300px; }
+        .contact-col h3 { font-size: 24px; color: var(--dark); margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 25px; }
+        .person-box { background: var(--light-bg); padding: 20px; border-radius: var(--radius); margin-bottom: 20px; border-left: 5px solid var(--primary); }
+        .person-role { font-size: 13px; text-transform: uppercase; color: var(--text-muted); font-weight: 700; letter-spacing: 0.5px; }
+        .person-name { font-size: 20px; font-weight: 800; color: var(--dark); margin: 5px 0; }
+        .person-contact { font-size: 16px; color: var(--text-muted); margin: 3px 0; }
+        .person-contact a { color: var(--primary); text-decoration: none; font-weight: 700; }
+        .time-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        .time-table td { padding: 8px 0; border-bottom: 1px solid #eee; color: var(--text-muted); font-size: 17px; }
+        .time-table td:nth-child(2) { text-align: right; font-weight: 700; color: var(--dark); }
+        .footer { background-color: var(--darker); color: #888; text-align: center; padding: 40px 20px; margin-top: 60px; font-size: 14px; }
+        .footer strong { color: #fff; font-size: 18px; letter-spacing: 1px; }
+        @media (max-width: 900px) { .header-left { gap: 20px; } .nav { gap: 15px; } .nav a { font-size: 14px; } }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <a href="index.html"><img src="Černozlute_logo_bile_pozadi.jfif" alt="Nedvěd Construction Logo" class="logo-img"></a>
+            <div class="nav">
+                <a href="index.html#sluzby">Služby</a>
+                <a href="technika.html">Technika</a>
+                <a href="o-nas.html">O nás</a>
+                <a href="nase-prace.html">Naše práce</a>
+                <a href="kariera.html">Kariéra</a>
+                <a href="kontakty.html" class="active">Kontakty</a>
+            </div>
+        </div>
+        <div class="contact-info">
+            <p>736 219 725</p>
+            <span>j.nedved@construction.cz</span>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="section-title">Kontakty a vedení společnosti</h2>
+        <div class="contact-wrap">
+            <div class="contact-col">
+                <h3>Vedení společnosti</h3>
+                <div class="person-box">
+                    <div class="person-role">CEO / Hlavní vedení</div>
+                    <div class="person-name">Jan Nedvěd</div>
+                    <div class="person-contact">Tel: <strong>736 219 725</strong></div>
+                    <div class="person-contact">E-mail: <a href="mailto:j.nedved@construction.cz">j.nedved@construction.cz</a></div>
+                </div>
+                <div class="person-box">
+                    <div class="person-role">Ředitel společnosti</div>
+                    <div class="person-name">Matyas Nedvěd</div>
+                    <div class="person-contact">Tel: <strong>736 219 724</strong></div>
+                    <div class="person-contact">E-mail: <a href="mailto:m.nedved@nedvedconstruction.cz">m.nedved@nedvedconstruction.cz</a></div>
+                </div>
+                <div class="person-box">
+                    <div class="person-role">Administrativa</div>
+                    <div class="person-name">Karel Nedvěd</div>
+                    <div class="person-contact">Tel: <strong>736 219 727</strong></div>
+                    <div class="person-contact">E-mail: <a href="mailto:k.nedved@nedvedconstruction.cz">k.nedved@nedvedconstruction.cz</a></div>
+                </div>
+            </div>
+            <div class="contact-col">
+                <h3>Sídlo a provozní doba</h3>
+                <div style="font-size: 17px; color: var(--text-muted); line-height: 1.8; margin-bottom: 30px;">
+                    <strong>Nedvěd Construction</strong><br>Červený Kostelec<br>Hlavní e-mail: <a href="mailto:nedved@construction.cz" style="color: var(--primary); text-decoration: none; font-weight: bold;">nedved@construction.cz</a>
+                </div>
+                <h3>Pracovní doba</h3>
+                <table class="time-table">
+                    <tr><td>Pondělí - Pátek</td><td>7:00 - 18:00</td></tr>
+                    <tr><td>Sobota - Neděle</td><td>8:00 - 15:00</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <strong>Nedvěd Construction</strong>
+        <p>&copy; 2026 Všechna práva vyhrazena.</p>
+    </div>
+</body>
+</html>
